@@ -12,6 +12,7 @@
         body {
             background-color: #F1D9C5;
         }
+
         form {
             text-align: center;
         }
@@ -19,23 +20,55 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">We Found A Match!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" id="modalBody">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <h1>Friend Finder Survey!</h1>
                 <p>Complete the survey to match with a friend so take your time and be honest!</p>
-                <p>1 - Strongly Agree & 5 - Strongly Disagree</p>
+                <p>
+                    <strong>1 - Strongly Agree & 5 - Strongly Disagree</strong>
+                </p>
             </div>
-            <div class="col-sm-4"></div>
+            <div class="col-sm-3"></div>
         </div>
-        <form>
+        <form id="userForm">
+            <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <label for="inputName" class="col-sm-2 col-form-label">Enter Name: </label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="inputName" placeholder="Jane Doe">
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
             <!-- Question One -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
                 <label for="questOne" class="col-sm-2 col-form-label">I Enjoy Watching Anime</label>
                 <div class="col-sm-2">
                     <select class="form-control" id="questOne">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -48,9 +81,10 @@
             <!-- Question Two -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">Outdoor Activities are a Must</label>
+                <label for="questTwo" class="col-sm-2 col-form-label">I Enjoy DIY Projects</label>
                 <div class="col-sm-2">
                     <select class="form-control" id="questTwo">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -63,9 +97,10 @@
             <!-- Question Three -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">I Love Sports</label>
+                <label for="questThree" class="col-sm-2 col-form-label">I Love Sports</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questThree">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -78,9 +113,10 @@
             <!-- Question Four -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">I am a Big Movie Person</label>
+                <label for="questFour" class="col-sm-2 col-form-label">I am a Big Movie Person</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questFour">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -93,9 +129,10 @@
             <!-- Question Five -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">I Love to Spend Time With my Pets</label>
+                <label for="questFive" class="col-sm-2 col-form-label">I Love to Spend Time With my Pets</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questFive">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -108,9 +145,10 @@
             <!-- Question Six -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">Question Six</label>
+                <label for="questSix" class="col-sm-2 col-form-label">I Often go to the gym</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questSix">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -123,9 +161,10 @@
             <!-- Question Seven -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">Question Seven</label>
+                <label for="questSeven" class="col-sm-2 col-form-label">I Find Video Games Really fun</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questSeven">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -138,9 +177,10 @@
             <!-- Question Eight -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">Question Eight</label>
+                <label for="questEight" class="col-sm-2 col-form-label">I am Very Outgoing</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questEight">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -153,9 +193,10 @@
             <!-- Question Nine -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">Question Nine</label>
+                <label for="questNine" class="col-sm-2 col-form-label">I Love to Travel Far</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questNine">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -168,9 +209,10 @@
             <!-- Question Ten -->
             <div class="form-group row">
                 <div class="col-sm-4"></div>
-                <label for="questOne" class="col-sm-2 col-form-label">Question Ten</label>
+                <label for="questTen" class="col-sm-2 col-form-label">I do Outdoor Activities Often</label>
                 <div class="col-sm-2">
-                    <select class="form-control" id="questOne">
+                    <select class="form-control" id="questTen">
+                        <option value='' disabled='disabled' selected="selected">Select a Value</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -180,9 +222,57 @@
                 </div>
                 <div class="col-sm-4"></div>
             </div>
-            <button type="submit" class="btn btn-info mb-2">Submit</button>
+            <button type="submit" class="btn btn-info mb-2" id="submitBtn">Submit</button>
         </form>
     </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitBtn").on("click", function (event) {
+                event.preventDefault();
+                var answers = [];       //Array to Hold Responses of Questions, Except Name Input
+                var form = document.getElementById('userForm').elements;     //Get all Children Elements of the Form
+
+                //Loop Through Select Elements
+                for (var i = 1; i < form.length - 1; i++) {
+                    //They Did Not Change One or More Select Questions
+                    if (form[i].value === "") {
+                        alert("Please Finish Survey!");
+                        break;
+                    }
+                    //If Response is a Valid One
+                    else {
+                        answers.push(form[i].value);
+                    }
+                }
+
+                //Create Object to Post
+                var newPerson = {
+                    name: $("#inputName").val().trim(),
+                    scores: answers
+                };
+
+                //If There is a Response for Every Question Continue to Post
+                if (newPerson.scores.length === 10) {
+                    //console.log(newPerson);
+                    $.post("/api/friends", newPerson, function(data) {
+                            console.log(data);
+                            $("#modalBody").empty();
+
+                            $("#modalBody").append("<img alt='Picture of Matched Friend' src='https://robohash.org/" + data.photo + ".png'>");
+                            $("#modalBody").append("<p>Name: " + data.name + "</p>");
+
+                            $("#modalCenter").modal("show");
+                        });
+
+                    //Clear the Form
+                    $("#userForm")[0].reset();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
