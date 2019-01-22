@@ -6,3 +6,5 @@ Your survey should have 10 questions of your choosing. Each answer should be on 
 
 
 Technologies Used: HTML/CSS -  Bootstrap - jQuery - Node.js - Express.js
+
+To view website check https://fast-peak-21374.herokuapp.com
